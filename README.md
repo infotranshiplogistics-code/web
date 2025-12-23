@@ -1,2 +1,1 @@
-# web
-web htm host
+This is a webpage for Tranship Logistics & Escrows
