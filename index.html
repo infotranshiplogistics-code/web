@@ -7,11 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-blue: #5bbcff;     /* Fallback color if background image fails */
-      --accent-red: #ff5722;       /* Accent color (from logo) */
+      --primary-blue: #5bbcff; /* Fallback color if background image fails */
+      --accent-red: #ff5722; /* Accent color (from logo) */
       --text-dark: #333;
       --bg-light: #f9fbff;
       --white: #ffffff;
+      --header-overlay: rgba(255, 255, 255, 0.7); /* Overlay to reduce background intensity */
     }
     body {
       margin: 0;
@@ -21,26 +22,60 @@
       line-height: 1.6;
     }
     header {
-      background: var(--primary-blue) url('/header-bg.jpg') center/cover no-repeat; /* CHANGE THIS IMAGE */
+      background: var(--primary-blue) url('/header-bg.jpg') center/cover no-repeat;
       color: var(--white);
-      padding: 40px 20px 60px;
-      text-align: center;
+      padding: 30px 20px 80px;
       position: relative;
+      min-height: 300px;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--header-overlay);
+      z-index: 1;
+    }
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo-container {
+      text-align: left;
+      margin-bottom: 20px;
     }
     .logo {
-      max-width: 250px;        /* Adjust size as needed */
+      max-width: 280px; /* Adjust as needed */
       height: auto;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); /* Optional: adds subtle depth */
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+    .home-link {
+      display: block;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: var(--primary-blue);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .home-link:hover {
+      color: var(--accent-red);
+    }
+    .hero-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
     header h1 {
       margin: 0 0 10px;
       font-size: 2.5rem;
       font-weight: 700;
+      color: var(--text-dark);
     }
     header p {
       font-size: 1.1rem;
       font-weight: 400;
+      color: var(--text-dark);
     }
     nav {
       background: var(--white);
@@ -89,7 +124,7 @@
       font-weight: 500;
     }
     .cta {
-      background: var(--accent-red) url('images/cta-bg.jpg') center/cover no-repeat; /* OPTIONAL: Change this for CTA background image */
+      background: var(--accent-red) url('images/cta-bg.jpg') center/cover no-repeat;
       color: var(--white);
       text-align: center;
       padding: 50px 20px;
@@ -123,11 +158,18 @@
 <body>
   <!-- HERO / HOME -->
   <header id="home">
-    <!-- CHANGE THIS TO YOUR LOGO FILE -->
-    <img src="/logo.png" alt="Tranship Logistics Logo" class="logo">
-    <h1>Tranship Logistics</h1>
-    <p>Fast, Reliable & Secure Delivery Services Across Nigeria & Beyond</p>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="/logo.png" alt="Tranship Logistics Logo" class="logo">
+        <a href="https://mytranship.com" class="home-link">https://mytranship.com</a>
+      </div>
+      <div class="hero-text">
+        <h1>Tranship Logistics</h1>
+        <p>Fast, Reliable & Secure Delivery Services Across Nigeria & Beyond</p>
+      </div>
+    </div>
   </header>
+
   <!-- NAV -->
   <nav>
     <a href="#home">Home</a>
@@ -135,6 +177,7 @@
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
@@ -149,6 +192,7 @@
       operations, we ensure your packages arrive on time—every time.
     </p>
   </section>
+
   <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
@@ -171,6 +215,7 @@
       </div>
     </div>
   </section>
+
   <!-- CALL TO ACTION -->
   <section class="cta">
     <h2>Need a Delivery Quote?</h2>
@@ -181,6 +226,7 @@
       Drop a Quote on WhatsApp
     </a>
   </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
@@ -188,6 +234,7 @@
     <p><strong>Email:</strong> info@mytranship.com</p>
     <p><strong>Address:</strong> 208A, Ikorodu Road, Palmgrove, Lagos, Nigeria</p>
   </section>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2025 Tranship Logistics. All rights reserved.</p>
