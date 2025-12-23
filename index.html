@@ -2,36 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tranship Logistics and Escrows</title>
+  <title>Tranship Logistics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-blue: #5bbcff;     /* Fallback color if background image fails */
+      --accent-red: #ff5722;       /* Accent color (from logo) */
+      --text-dark: #333;
+      --bg-light: #f9fbff;
+      --white: #ffffff;
+    }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #333;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
       line-height: 1.6;
     }
-
     header {
-      background: #5bbcff;
-      color: #fff;
-      padding: 60px 20px;
+      background: var(--primary-blue) url('images/header-bg.jpg') center/cover no-repeat; /* CHANGE THIS IMAGE */
+      color: var(--white);
+      padding: 40px 20px 60px;
       text-align: center;
+      position: relative;
     }
-
+    .logo {
+      max-width: 250px;        /* Adjust size as needed */
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); /* Optional: adds subtle depth */
+    }
     header h1 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 2.5rem;
+      font-weight: 700;
     }
-
     header p {
       font-size: 1.1rem;
+      font-weight: 400;
     }
-
     nav {
-      background: #ffffff;
+      background: var(--white);
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -39,79 +51,83 @@
       top: 0;
       z-index: 10;
     }
-
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #5bbcff;
-      font-weight: bold;
+      color: var(--primary-blue);
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
-
+    nav a:hover {
+      color: var(--accent-red);
+    }
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
-
     section h2 {
       text-align: center;
       margin-bottom: 30px;
-      color: #5bbcff;
+      color: var(--primary-blue);
+      font-weight: 700;
     }
-
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .service-box {
       padding: 25px;
       border-radius: 10px;
-      background: #f9fbff;
+      background: var(--bg-light);
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       text-align: center;
     }
-
+    .service-box h3 {
+      color: var(--accent-red);
+      font-weight: 500;
+    }
     .cta {
-      background: #5bbcff;
-      color: #fff;
+      background: var(--accent-red) url('images/cta-bg.jpg') center/cover no-repeat; /* OPTIONAL: Change this for CTA background image */
+      color: var(--white);
       text-align: center;
       padding: 50px 20px;
     }
-
     .cta a {
-      background: #ffffff;
-      color: #5bbcff;
+      background: var(--white);
+      color: var(--primary-blue);
       padding: 15px 30px;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
       display: inline-block;
       margin-top: 20px;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-
+    .cta a:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+    }
     footer {
-      background: #f2f6fb;
+      background: var(--bg-light);
       padding: 30px 20px;
       text-align: center;
       font-size: 0.9rem;
     }
-
     footer p {
       margin: 5px 0;
     }
   </style>
 </head>
-
 <body>
-
   <!-- HERO / HOME -->
   <header id="home">
-    <h1>Tranship Logistics and Escrows</h1>
+    <!-- CHANGE THIS TO YOUR LOGO FILE -->
+    <img src="images/logo.png" alt="Tranship Logistics Logo" class="logo">
+    <h1>Tranship Logistics</h1>
     <p>Fast, Reliable & Secure Delivery Services Across Nigeria & Beyond</p>
   </header>
-
   <!-- NAV -->
   <nav>
     <a href="#home">Home</a>
@@ -119,12 +135,11 @@
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
     <p>
-      Tranship Logistics and Escrows is a trusted logistics and delivery company committed to
+      Tranship Logistics is a trusted logistics and delivery company committed to
       providing fast, safe, and affordable shipping solutions. Our mission is to
       simplify logistics for individuals and businesses through smart delivery
       systems and dedicated service.
@@ -134,60 +149,49 @@
       operations, we ensure your packages arrive on time—every time.
     </p>
   </section>
-
   <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
-
     <div class="services">
       <div class="service-box">
         <h3>Same-Day Delivery</h3>
         <p>Fast same-city deliveries with guaranteed speed and reliability.</p>
       </div>
-
       <div class="service-box">
         <h3>Interstate Shipping</h3>
         <p>Secure and affordable delivery across Nigerian states.</p>
       </div>
-
       <div class="service-box">
         <h3>International Logistics</h3>
         <p>We handle cross-border shipments with professional care.</p>
       </div>
-
       <div class="service-box">
         <h3>Business & Bulk Delivery</h3>
         <p>Customized logistics solutions for SMEs and enterprises.</p>
       </div>
     </div>
   </section>
-
   <!-- CALL TO ACTION -->
   <section class="cta">
     <h2>Need a Delivery Quote?</h2>
     <p>Chat with us instantly on WhatsApp and get a fast response.</p>
-
-    <!-- WHATSAPP LINK -->
-    <a 
-      href="https://wa.me/2348012345678?text=Hello%20SkyBlue%20Logistics,%20I%20would%20like%20to%20get%20a%20delivery%20quote."
+    <a
+      href="https://wa.me/2348105114923?text=Hello%20Tranship%20Logistics,%20I%20would%20like%20to%20get%20a%20delivery%20quote."
       target="_blank">
       Drop a Quote on WhatsApp
     </a>
   </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +234 801 234 5678</p>
+    <p><strong>Phone:</strong> +234 810 511 4923</p>
     <p><strong>Email:</strong> info@mytranship.com</p>
-    <p><strong>Address:</strong> Lagos, Nigeria</p>
+    <p><strong>Address:</strong> 208A, Ikorodu Road, Palmgrove, Lagos, Nigeria</p>
   </section>
-
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Tranship Logistics and Escrows. All rights reserved.</p>
-    <p>Email: info@mytranship.com | Lagos, Nigeria</p>
+    <p>© 2025 Tranship Logistics. All rights reserved.</p>
+    <p>Email: info@mytranship.com | 208A, Ikorodu Road, Palmgrove, Lagos, Nigeria</p>
   </footer>
-
 </body>
 </html>
