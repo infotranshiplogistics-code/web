@@ -19,7 +19,7 @@
       font-family: 'Roboto', Arial, Helvetica, sans-serif;
       background: var(--white);
       color: var(--text-dark);
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background: var(--primary-blue) url('/header-bg.jpg') center/cover no-repeat;
@@ -46,16 +46,16 @@
       margin-bottom: 20px;
     }
     .logo-link {
-      display: inline-block; /* Makes the entire logo area clickable */
+      display: inline-block;
     }
     .logo {
-      max-width: 280px; /* Adjust as needed */
+      max-width: 280px;
       height: auto;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
       transition: opacity 0.3s ease;
     }
     .logo-link:hover .logo {
-      opacity: 0.9; /* Subtle hover effect */
+      opacity: 0.9;
     }
     .hero-text {
       text-align: center;
@@ -93,15 +93,23 @@
       color: var(--accent-red);
     }
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
     }
     section h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       color: var(--primary-blue);
       font-weight: 700;
+      font-size: 2.2rem;
+    }
+    #about p {
+      font-size: 1.05rem;
+      margin-bottom: 1.4em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .services {
       display: grid;
@@ -156,7 +164,6 @@
   <header id="home">
     <div class="header-content">
       <div class="logo-container">
-        <!-- Logo is now wrapped in a link that points to the homepage -->
         <a href="https://mytranship.com" class="logo-link" aria-label="Tranship Logistics - Home">
           <img src="/logo.png" alt="Tranship Logistics Logo" class="logo">
         </a>
@@ -178,17 +185,12 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Tranship Logistics is a trusted logistics and delivery company committed to
-      providing fast, safe, and affordable shipping solutions. Our mission is to
-      simplify logistics for individuals and businesses through smart delivery
-      systems and dedicated service.
-    </p>
-    <p>
-      With experienced riders, real-time communication, and customer-first
-      operations, we ensure your packages arrive on time—every time.
-    </p>
+    <h2>About Tranship Logistics</h2>
+    <p>Tranship Logistics is a dynamic, family-owned logistics and supply chain solutions provider headquartered in Lagos, Nigeria. With a strong foundation in operational excellence and customer-centric service, we deliver fast, secure, and cost-effective logistics solutions across Nigeria, the African continent, and beyond.</p>
+    <p>Our mission is to empower businesses—particularly small and medium enterprises (SMEs)—by simplifying complex logistics challenges and enabling seamless trade in today’s global marketplace. We go beyond traditional transportation: we offer end-to-end supply chain support, including same-day urban delivery, reliable interstate and international shipping, customized bulk logistics, and secure escrow services that protect both buyers and sellers during cross-border transactions.</p>
+    <p>At Tranship, reliability is our cornerstone. We combine experienced professionals, real-time tracking technology, and a commitment to transparency to ensure every shipment arrives on time, in perfect condition, and with complete peace of mind. Whether you’re scaling your e-commerce operations, importing/exporting goods, or expanding into new markets, Tranship serves as your trusted strategic partner.</p>
+    <p>Our vision is to become the most dependable and innovative logistics provider in Africa and a preferred choice for international businesses seeking reliable entry into the African market. With Tranship, you gain not just a service provider, but a long-term ally dedicated to your success.</p>
+    <p>We invite you to experience the Tranship difference—where professionalism meets genuine care, and every delivery moves your business forward.</p>
   </section>
 
   <!-- SERVICES -->
@@ -228,7 +230,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +234 810 511 4923</p>
+    <p><strong>Phone:</strong> +234 810 511 4923, +234 904 246 8592</p>
     <p><strong>Email:</strong> info@mytranship.com</p>
     <p><strong>Address:</strong> 208A, Ikorodu Road, Palmgrove, Lagos, Nigeria</p>
   </section>
